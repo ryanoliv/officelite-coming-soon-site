@@ -1,36 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
 
-    <title>Frontend Mentor | Officelite coming soon site</title>
-</head>
-<body>
-  Work smarter. Save time.
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
 
-  Easily manage your projects. Get on the list and receive in-app perks available only to 
-  early subscribers. We are moving into final development and getting ready for official launch soon.
+    <link rel="stylesheet" href="css/main.min.css" />
 
-  <!-- If you're choosing to make this date dynamic, set it to 30 days in the future from the moment the visitor views the page -->
-  Coming 4 Nov 2020
+    <title>Officelite coming soon site | Sign Up</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <img
+          src="/starter-code/assets/shared/logo.svg"
+          alt="officelite logo"
+          class="header__logo"
+        />
+      </div>
+    </header>
+    <main>
+      <section class="sign-up">
+        <div class="container">
+          <div class="sign-up__content">
+            <h1 class="hero__content--text--title">Work smarter. Save time.</h1>
+            <p class="hero__content--text--description">
+              Easily manage your projects. Get on the list and receive in-app
+              perks available only to early subscribers. We are moving into
+              final development and getting ready for official launch soon.
+            </p>
+            <div class="countdown__timer">
+              <h2 class="countdown__timer--title">
+                Coming <span class="countdown__timer--date">4 Nov 2023</span>
+              </h2>
+              <div class="countdown__timer--countdown">
+                <div class="countdown__timer--countdown--number-container">
+                  <h3
+                    class="countdown__timer--countdown--number-container--number days"
+                  >
+                    47
+                  </h3>
+                  <p
+                    class="countdown__timer--countdown--number-container--text"
+                  >
+                    days
+                  </p>
+                </div>
+                <div class="countdown__timer--countdown--number-container">
+                  <h3
+                    class="countdown__timer--countdown--number-container--number hours"
+                  >
+                    07
+                  </h3>
+                  <p
+                    class="countdown__timer--countdown--number-container--text"
+                  >
+                    hours
+                  </p>
+                </div>
+                <div class="countdown__timer--countdown--number-container">
+                  <h3
+                    class="countdown__timer--countdown--number-container--number min"
+                  >
+                    56
+                  </h3>
+                  <p
+                    class="countdown__timer--countdown--number-container--text"
+                  >
+                    min
+                  </p>
+                </div>
+                <div class="countdown__timer--countdown--number-container">
+                  <h3
+                    class="countdown__timer--countdown--number-container--number sec"
+                  >
+                    07
+                  </h3>
+                  <p
+                    class="countdown__timer--countdown--number-container--text"
+                  >
+                    sec
+                  </p>
+                </div>
+              </div>
+            </div>
+            <form action="" class="form">
+              <input type="text" name="name" id="name" placeholder="Name" />
+              <input type="email" name="email" id="email" placeholder="Email" />
+              <select name="plans" id="plans">
+                <option value="basic pack">
+                  Basic Pack <span class="pack-type">Free</span>
+                </option>
+                <option value="pro pack">
+                  Pro Pack <span class="pack-type">$9.99</span>
+                </option>
+                <option value="ultimate pack">
+                  Ultimate Pack <span class="pack-type">$19.99</span>
+                </option>
+              </select>
+              <input
+                type="tel"
+                name="number"
+                id="number"
+                placeholder="Phone Number"
+              />
+              <input
+                type="text"
+                name="company"
+                id="company"
+                placeholder="company"
+              />
+              <button type="submit" class="btn primary">Get on the list</button>
+            </form>
+          </div>
 
-  <!-- If you're choosing to make this timer dynamic, have it countdown from the date you set above -->
-  47 Days
-  07 Hours
-  56 Min
-  14 Sec
-
-  Name
-  Email Address
-  Basic Pack Free
-  Basic Pack Free
-  Pro Pack $9.99
-  Ultimate Pack $19.99
-  Phone Number
-  Company
-  Get on the list
-</body>
+          <div class="sign-up__bg">
+            <img
+              src="/starter-code/assets/sign-up/bg-pattern-side.svg"
+              alt="background pattern"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
