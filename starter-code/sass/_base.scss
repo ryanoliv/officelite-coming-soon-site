@@ -87,6 +87,10 @@ a {
   --letters-spacing-1: 5px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: var(--clr-primary);
   background-color: var(--clr-neutral-off-white);
@@ -301,4 +305,8 @@ body {
       }
     }
   }
+}
+
+.sign-up {
+  min-height: calc(100vh - 192px);
 }

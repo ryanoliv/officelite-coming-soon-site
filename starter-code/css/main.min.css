@@ -81,6 +81,10 @@ a {
   --letters-spacing-1: 5px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: var(--clr-primary);
   background-color: var(--clr-neutral-off-white);
@@ -275,6 +279,10 @@ body {
   font-weight: var(--font-weight-bold);
 }
 
+.sign-up {
+  min-height: calc(100vh - 192px);
+}
+
 .btn {
   padding: 0.875em 2.5em;
   border: none;
@@ -284,6 +292,7 @@ body {
   transition: all 0.3s ease;
   position: relative;
   z-index: 10;
+  text-align: center;
 }
 .btn.primary {
   color: var(--clr-neutral-white);
