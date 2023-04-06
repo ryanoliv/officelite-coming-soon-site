@@ -26,7 +26,7 @@
     <header class="header">
       <div class="container">
         <img
-          src="/starter-code/assets/shared/logo.svg"
+          src="/assets/shared/logo.svg"
           alt="officelite logo"
           class="header__logo"
         />
@@ -34,6 +34,11 @@
     </header>
     <main>
       <section class="hero">
+        <img
+          src="./assets/home/bg-pattern-header.svg"
+          alt="hero background pattern"
+          class="hero__bg-img"
+        />
         <div class="container">
           <div class="hero__content">
             <div class="hero__content--hero">
@@ -46,11 +51,11 @@
                   and projects. Officelite is the new collaboration platform
                   built with an intuitive interface to improve productivity.
                 </p>
-                <button class="btn primary">Get Started</button>
+                <button class="btn primary shadow">Get Started</button>
               </div>
               <div class="hero__content--img">
                 <img
-                  src="/starter-code/assets/home/illustration-charts.svg"
+                  src="assets/home/illustration-charts-cropped.svg"
                   alt="hero illustration"
                   class="hero__content--img--illustration"
                 />
@@ -76,7 +81,12 @@
                 </div>
                 <button class="btn secondary">Try for Free</button>
               </div>
-              <div class="hero__content--pricing__card">
+              <div class="hero__content--pricing__card card-invert">
+                <img
+                  src="./assets/home/bg-pattern-pricing.svg"
+                  alt="pricing background pattern"
+                  class="hero__content--pricing__card--bg"
+                />
                 <div class="hero__content--pricing__card__plan">
                   <h2 class="hero__content--pricing__card__plan__type">Pro</h2>
                   <h3 class="hero__content--pricing__card__plan__price">
@@ -86,7 +96,7 @@
                     Per user, billed monthly
                   </h4>
                 </div>
-                <div class="hero__content--pricing__card__features">
+                <div class="hero__content--pricing__card__features lighter">
                   <p>All essential integrations</p>
                   <p>50GB storage</p>
                   <p>More control and insights</p>
@@ -117,6 +127,11 @@
         </div>
       </section>
       <section class="countdown">
+        <img
+          class="countdown__bg-pattern"
+          src="./assets/home/bg-pattern-footer.svg"
+          alt="footer background pattern"
+        />
         <div class="container">
           <div class="countdown__container">
             <div class="countdown__timer">
@@ -126,7 +141,8 @@
               <div class="countdown__timer--countdown">
                 <div class="countdown__timer--countdown--number-container">
                   <h3
-                    class="countdown__timer--countdown--number-container--number days"
+                    class="countdown__timer--countdown--number-container--number"
+                    id="days"
                   >
                     47
                   </h3>
@@ -138,7 +154,8 @@
                 </div>
                 <div class="countdown__timer--countdown--number-container">
                   <h3
-                    class="countdown__timer--countdown--number-container--number hours"
+                    class="countdown__timer--countdown--number-container--number"
+                    id="hours"
                   >
                     07
                   </h3>
@@ -150,7 +167,8 @@
                 </div>
                 <div class="countdown__timer--countdown--number-container">
                   <h3
-                    class="countdown__timer--countdown--number-container--number min"
+                    class="countdown__timer--countdown--number-container--number"
+                    id="min"
                   >
                     56
                   </h3>
@@ -162,7 +180,8 @@
                 </div>
                 <div class="countdown__timer--countdown--number-container">
                   <h3
-                    class="countdown__timer--countdown--number-container--number sec"
+                    class="countdown__timer--countdown--number-container--number"
+                    id="sec"
                   >
                     07
                   </h3>
@@ -179,5 +198,31 @@
         </div>
       </section>
     </main>
+    <script>
+      const countDownDate = new Date("November 4, 2023 11:00:00").getTime();
+
+      const x = setInterval(function () {
+        const now = new Date().getTime();
+
+        const distance = countDownDate - now;
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        const mins = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const sec = Math.floor((distance % (1000 * 60)) / 1000);
+
+        const daysEl = document.getElementById("days");
+        const hoursEl = document.getElementById("hours");
+        const minsEl = document.getElementById("min");
+        const secEl = document.getElementById("sec");
+
+        daysEl.innerText = days;
+        hoursEl.innerHTML = hours;
+        minsEl.innerHTML = mins;
+        secEl.innerHTML = sec;
+      });
+    </script>
   </body>
 </html>
