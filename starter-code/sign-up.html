@@ -22,7 +22,7 @@
 
     <title>Officelite coming soon site | Sign Up</title>
   </head>
-  <body>
+  <body class="overflow-y-hidden">
     <header class="header">
       <div class="container">
         <img
@@ -36,105 +36,136 @@
       <section class="sign-up">
         <div class="container">
           <div class="sign-up__content">
-            <h1 class="hero__content--text--title">Work smarter. Save time.</h1>
-            <p class="hero__content--text--description">
-              Easily manage your projects. Get on the list and receive in-app
-              perks available only to early subscribers. We are moving into
-              final development and getting ready for official launch soon.
-            </p>
-            <div class="countdown__timer">
-              <h2 class="countdown__timer--title">
-                Coming <span class="countdown__timer--date">4 Nov 2023</span>
-              </h2>
-              <div class="countdown__timer--countdown">
-                <div class="countdown__timer--countdown--number-container">
-                  <h3
-                    class="countdown__timer--countdown--number-container--number days"
-                  >
-                    47
-                  </h3>
-                  <p
-                    class="countdown__timer--countdown--number-container--text"
-                  >
-                    days
-                  </p>
+            <div class="sign-up__content__left">
+              <h1 class="hero__content--text--title">
+                Work smarter. Save time.
+              </h1>
+              <p class="hero__content--text--description">
+                Easily manage your projects. Get on the list and receive in-app
+                perks available only to early subscribers. We are moving into
+                final development and getting ready for official launch soon.
+              </p>
+              <div class="countdown__container">
+                <div
+                  class="countdown__timer marginless sign-up-countdown-padding"
+                >
+                  <h2 class="countdown__timer--title">
+                    Coming
+                    <span class="countdown__timer--date">4 Nov 2023</span>
+                  </h2>
+                  <div class="countdown__timer--countdown">
+                    <div
+                      class="countdown__timer--countdown--number-container countdown-lighter"
+                    >
+                      <h3
+                        class="countdown__timer--countdown--number-container--number"
+                        id="days"
+                      >
+                        47
+                      </h3>
+                      <p
+                        class="countdown__timer--countdown--number-container--text"
+                      >
+                        days
+                      </p>
+                    </div>
+                    <div
+                      class="countdown__timer--countdown--number-container countdown-lighter"
+                    >
+                      <h3
+                        class="countdown__timer--countdown--number-container--number"
+                        id="hours"
+                      >
+                        07
+                      </h3>
+                      <p
+                        class="countdown__timer--countdown--number-container--text"
+                      >
+                        hours
+                      </p>
+                    </div>
+                    <div
+                      class="countdown__timer--countdown--number-container countdown-lighter"
+                    >
+                      <h3
+                        class="countdown__timer--countdown--number-container--number"
+                        id="min"
+                      >
+                        56
+                      </h3>
+                      <p
+                        class="countdown__timer--countdown--number-container--text"
+                      >
+                        min
+                      </p>
+                    </div>
+                    <div
+                      class="countdown__timer--countdown--number-container countdown-lighter"
+                    >
+                      <h3
+                        class="countdown__timer--countdown--number-container--number"
+                        id="sec"
+                      >
+                        07
+                      </h3>
+                      <p
+                        class="countdown__timer--countdown--number-container--text"
+                      >
+                        sec
+                      </p>
+                    </div>
+                  </div>
                 </div>
-                <div class="countdown__timer--countdown--number-container">
-                  <h3
-                    class="countdown__timer--countdown--number-container--number hours"
-                  >
-                    07
-                  </h3>
-                  <p
-                    class="countdown__timer--countdown--number-container--text"
-                  >
-                    hours
-                  </p>
-                </div>
-                <div class="countdown__timer--countdown--number-container">
-                  <h3
-                    class="countdown__timer--countdown--number-container--number min"
-                  >
-                    56
-                  </h3>
-                  <p
-                    class="countdown__timer--countdown--number-container--text"
-                  >
-                    min
-                  </p>
-                </div>
-                <div class="countdown__timer--countdown--number-container">
-                  <h3
-                    class="countdown__timer--countdown--number-container--number sec"
-                  >
-                    07
-                  </h3>
-                  <p
-                    class="countdown__timer--countdown--number-container--text"
-                  >
-                    sec
-                  </p>
-                </div>
+                <!-- <a class="btn primary" href="/sign-up.html">Get Started</a> -->
               </div>
             </div>
-            <form action="" class="form">
-              <input type="text" name="name" id="name" placeholder="Name" />
-              <input type="email" name="email" id="email" placeholder="Email" />
-              <select name="plans" id="plans">
-                <option value="basic pack">
-                  Basic Pack <span class="pack-type">Free</span>
-                </option>
-                <option value="pro pack">
-                  Pro Pack <span class="pack-type">$9.99</span>
-                </option>
-                <option value="ultimate pack">
-                  Ultimate Pack <span class="pack-type">$19.99</span>
-                </option>
-              </select>
-              <input
-                type="tel"
-                name="number"
-                id="number"
-                placeholder="Phone Number"
-              />
-              <input
-                type="text"
-                name="company"
-                id="company"
-                placeholder="company"
-              />
-              <button type="submit" class="btn primary">Get on the list</button>
-            </form>
+            <div class="sign-up__content__right">
+              <form action="" class="form shadow">
+                <input type="text" name="name" id="name" placeholder="Name" />
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Email"
+                />
+                <select name="plans" id="plans">
+                  <option value="basic pack">
+                    Basic Pack <span class="pack-type">Free</span>
+                  </option>
+                  <option value="pro pack">
+                    Pro Pack <span class="pack-type">$9.99</span>
+                  </option>
+                  <option value="ultimate pack">
+                    Ultimate Pack <span class="pack-type">$19.99</span>
+                  </option>
+                </select>
+                <input
+                  type="tel"
+                  name="number"
+                  id="number"
+                  placeholder="Phone Number"
+                />
+                <input
+                  type="text"
+                  name="company"
+                  id="company"
+                  placeholder="Company"
+                />
+                <button type="submit" class="btn primary">
+                  Get on the list
+                </button>
+              </form>
+            </div>
           </div>
-
-          <div class="sign-up__bg">
-            <img
-              src="./assets/sign-up/bg-pattern-side.svg"
-              alt="background pattern"
-            />
-          </div>
+        </div>
+        <div class="sign-up__bg">
+          <img
+            src="./assets/sign-up/bg-pattern-side.svg"
+            alt="background pattern"
+          />
         </div>
       </section>
     </main>
+    <script src="./countdown.js"></script>
   </body>
 </html>
