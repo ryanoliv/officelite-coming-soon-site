@@ -128,7 +128,7 @@
                   id="email"
                   placeholder="Email"
                 />
-                <select name="plans" id="plans">
+                <!-- <select name="plans" id="plans">
                   <option value="basic pack">
                     Basic Pack <span class="pack-type">Free</span>
                   </option>
@@ -138,7 +138,50 @@
                   <option value="ultimate pack">
                     Ultimate Pack <span class="pack-type">$19.99</span>
                   </option>
-                </select>
+                </select> -->
+                <div class="dropdown" id="plans">
+                  <div class="select-btn">
+                    <div class="select-btn-text">
+                      Basic Pack <span class="pack-type">Free</span>
+                    </div>
+                    <img
+                      src="./assets/sign-up/icon-arrow-down.svg"
+                      alt="select arrow"
+                    />
+                  </div>
+                  <ul class="dropdown-list shadow-2">
+                    <li class="dropdown-item">
+                      <div class="pack">
+                        Basic Pack <span class="pack-type">Free</span>
+                      </div>
+                      <img
+                        src="./assets/sign-up/icon-check.svg"
+                        alt="check mark"
+                        class="hidden"
+                      />
+                    </li>
+                    <li class="dropdown-item">
+                      <div class="pack">
+                        Pro Pack <span class="pack-type">$9.99</span>
+                      </div>
+                      <img
+                        src="./assets/sign-up/icon-check.svg"
+                        alt="check mark"
+                        class="hidden"
+                      />
+                    </li>
+                    <li class="dropdown-item">
+                      <div class="pack">
+                        Ultimate Pack <span class="pack-type">$19.99</span>
+                      </div>
+                      <img
+                        src="./assets/sign-up/icon-check.svg"
+                        alt="check mark"
+                        class="hidden"
+                      />
+                    </li>
+                  </ul>
+                </div>
                 <input
                   type="tel"
                   name="number"
@@ -167,5 +210,31 @@
       </section>
     </main>
     <script src="./countdown.js"></script>
+    <script>
+      const packs = document.querySelectorAll(".pack");
+      const dropdown = document.querySelector(".dropdown-list");
+      const selectBtn = document.querySelector(".select-btn");
+      const selectBtnText = document.querySelector(".select-btn-text");
+      const selectBtnArrow = document.querySelector(".select-btn img");
+      const checkMarks = document.querySelectorAll(".pack img");
+
+      selectBtn.addEventListener("click", () => {
+        dropdown.classList.toggle("active");
+        if (dropdown.classList.contains("active")) {
+          selectBtnArrow.style.transform = "rotate(180deg)";
+        } else {
+          selectBtnArrow.style.transform = "rotate(360deg)";
+        }
+      });
+
+      packs.forEach((pack) => {
+        pack.addEventListener("click", () => {
+          let selectedPack = pack.innerText;
+          selectBtnText.innerText = selectedPack;
+          dropdown.classList.remove("active");
+          selectBtnArrow.style.transform = "rotate(360deg)";
+        });
+      });
+    </script>
   </body>
 </html>
